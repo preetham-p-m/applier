@@ -1,47 +1,30 @@
-"""
-Author:     Sai Vignesh Golla
-LinkedIn:   https://www.linkedin.com/in/saivigneshgolla/
-
-Copyright (C) 2024 Sai Vignesh Golla
-
-License:    GNU Affero General Public License
-            https://www.gnu.org/licenses/agpl-3.0.en.html
-
-GitHub:     https://github.com/GodsScion/Auto_job_applier_linkedIn
-
-version:    24.12.29.12.30
-"""
-
-###################################################### APPLICATION INPUTS ######################################################
-
-
 # >>>>>>>>>>> Easy Apply Questions & Inputs <<<<<<<<<<<
 
 # Give an relative path of your default resume to be uploaded. If file in not found, will continue using your previously uploaded resume in LinkedIn.
 default_resume_path = "all resumes/default/resume.pdf"  # (In Development)
 
 # What do you want to answer for questions that ask about years of experience you have, this is different from current_experience?
-years_of_experience = "5"  # A number in quotes Eg: "0","1","2","3","4", etc.
+years_of_experience = "2.7"  # A number in quotes Eg: "0","1","2","3","4", etc.
 
 # Do you need visa sponsorship now or in future?
 require_visa = "No"  # "Yes" or "No"
 
 # What is the link to your portfolio website, leave it empty as "", if you want to leave this question unanswered
-website = "https://github.com/GodsScion"  # "www.example.bio" or "" and so on....
+website = "https://preetham-p-m.vercel.app"  # "www.example.bio" or "" and so on....
 
 # Please provide the link to your LinkedIn profile.
-linkedIn = "https://www.linkedin.com/in/saivigneshgolla/"  # "https://www.linkedin.com/in/example" or "" and so on...
+linkedIn = "https://www.linkedin.com/in/preetham-p-m"  # "https://www.linkedin.com/in/example" or "" and so on...
 
 # What is the status of your citizenship? # If left empty as "", tool will not answer the question. However, note that some companies make it compulsory to be answered
 # Valid options are: "U.S. Citizen/Permanent Resident", "Non-citizen allowed to work for any employer", "Non-citizen allowed to work for current employer", "Non-citizen seeking work authorization", "Canadian Citizen/Permanent Resident" or "Other"
-us_citizenship = "U.S. Citizen/Permanent Resident"
+us_citizenship = "Non-citizen seeking work authorization"
 
 
 ## SOME ANNOYING QUESTIONS BY COMPANIES 🫠 ##
 
 # What to enter in your desired salary question (American and European), What is your expected CTC (South Asian and others)?, only enter in numbers as some companies only allow numbers,
 desired_salary = (
-    1200000  # 80000, 90000, 100000 or 120000 and so on... Do NOT use quotes
+    2600000  # 80000, 90000, 100000 or 120000 and so on... Do NOT use quotes
 )
 """
 Note: If question has the word "lakhs" in it (Example: What is your expected CTC in lakhs),
@@ -55,7 +38,7 @@ And if asked in months, then it will divide by 12 and answer. Examples:
 
 # What is your current CTC? Some companies make it compulsory to be answered in numbers...
 current_ctc = (
-    800000  # 800000, 900000, 1000000 or 1200000 and so on... Do NOT use quotes
+    2200000  # 800000, 900000, 1000000 or 1200000 and so on... Do NOT use quotes
 )
 """
 Note: If question has the word "lakhs" in it (Example: What is your current CTC in lakhs),
@@ -84,12 +67,13 @@ then it will divide by 30 or 7 and answer respectively. Examples:
 """
 
 # Your LinkedIn headline in quotes Eg: "Software Engineer @ Google, Masters in Computer Science", "Recent Grad Student @ MIT, Computer Science"
-linkedin_headline = "Full Stack Developer with Masters in Computer Science and 4+ years of experience"  # "Headline" or "" to leave this question unanswered
+linkedin_headline = "Full Stack Developer at Coupa and 2.7+ years of experience"  # "Headline" or "" to leave this question unanswered
 
 # Your summary in quotes, use \n to add line breaks if using single quotes "Summary".You can skip \n if using triple quotes """Summary"""
 linkedin_summary = """
-I'm a Senior Software Engineer at Amazon with Masters in CS and 4+ years of experience in developing and maintaining Full Stack Web applications and cloud solutions.
-Specialized in React, Node.js, and Python.
+I am a Full Stack Engineer with expertise in both back-end and front-end development, working with technologies like Java, Spring Boot, React, C#, and ASP.Net Core,. I enjoy solving complex challenges and have built scalable solutions for various projects. My experience includes integrating powerful search capabilities with Elasticsearch, implementing CI/CD pipelines, and leveraging Docker, Kubernetes, and AWS for containerization and orchestration. Additionally, I have worked with Kafka and RabbitMQ to build robust and efficient messaging systems.
+
+With a strong problem-solving mindset, I continuously strive to improve my skills and deliver efficient, high-quality solutions. I'm passionate about contributing to impactful projects and collaborating in innovative teams.
 """
 
 """
@@ -98,7 +82,11 @@ Note: If left empty as "", the tool will not answer the question. However, note 
 
 # Your cover letter in quotes, use \n to add line breaks if using single quotes "Cover Letter".You can skip \n if using triple quotes """Cover Letter""" (This question makes sense though)
 cover_letter = """
-Cover Letter
+Dear Hiring Manager,
+
+I am excited to apply for the Backend Engineer position at your company. With expertise in Spring Boot and React.js, I specialize in building scalable backend systems, optimizing APIs, and ensuring seamless front-end integration. I have experience in developing microservices, implementing CI/CD pipelines, and working with cloud technologies to enhance system performance.
+
+I am passionate about solving complex challenges and improving development processes to deliver efficient and high-quality solutions. I would welcome the opportunity to contribute to your team and discuss how my skills align with your needs. Looking forward to your response.
 """
 
 """
@@ -112,7 +100,7 @@ recent_employer = (
 
 # Example question: "On a scale of 1-10 how much experience do you have building web or mobile applications? 1 being very little or only in school, 10 being that you have built and launched applications to real users"
 confidence_level = (
-    "8"  # Any number between "1" to "10" including 1 and 10, put it in quotes ""
+    "9"  # Any number between "1" to "10" including 1 and 10, put it in quotes ""
 )
 ##
 
@@ -138,21 +126,3 @@ Note: Will be treated as False if `run_in_background = True`
 overwrite_previous_answers = (
     False  # True or False, Note: True or False are case-sensitive
 )
-
-
-############################################################################################################
-"""
-THANK YOU for using my tool 😊! Wishing you the best in your job hunt 🙌🏻!
-
-Sharing is caring! If you found this tool helpful, please share it with your peers 🥺. Your support keeps this project alive.
-
-Support my work on <PATREON_LINK>. Together, we can help more job seekers.
-
-As an independent developer, I pour my heart and soul into creating tools like this, driven by the genuine desire to make a positive impact.
-
-Your support, whether through donations big or small or simply spreading the word, means the world to me and helps keep this project alive and thriving.
-
-Gratefully yours 🙏🏻,
-Sai Vignesh Golla
-"""
-############################################################################################################
