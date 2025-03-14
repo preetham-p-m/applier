@@ -27,9 +27,9 @@ echo Setting up ChromeDriver installation...
 
 :: Use https://googlechromelabs.github.io/chrome-for-testing/LATEST_RELEASE_STABLE to get version number directly Replace>>>>
 
-:: Step 1: Get the latest version information 
+:: Step 1: Get the latest version information
 powershell -Command "& { $response = Invoke-WebRequest -Uri 'https://googlechromelabs.github.io/chrome-for-testing/last-known-good-versions.json'; if ($response.StatusCode -ne 200) { exit 1 }; $response.Content | Out-File 'latest_versions_info.json' }"
-if %errorlevel% neq 0 ( 
+if %errorlevel% neq 0 (
     echo Please check your internet connection. See if any applications, firewalls, vpns, or devices are blocking the download.
     goto ExitSetup
 )
@@ -63,7 +63,7 @@ if not exist "%chrome_install_dir%" mkdir "%chrome_install_dir%"
 
 :: Use PowerShell Expand-Archive for extraction (works with ZIP files)
 powershell -Command "& {Expand-Archive -Path 'chromedriver.zip' -DestinationPath '%chrome_install_dir%' -Force}"
-if %errorlevel% neq 0 ( 
+if %errorlevel% neq 0 (
     echo FAILED to extract ChromeDriver. Check if any application is denying installation or extraction.
     goto ExitSetup
 )
@@ -78,9 +78,9 @@ set "chromedriver_dir=%chrome_install_dir%\chromedriver-win64"
 @REM :: Update PATH in the registry for future sessions
 @REM echo Adding ChromeDriver to path...
 @REM @REM echo ";%PATH%;" | find /C /I ";%path%;
-@REM @REM if errorlevel > 0 ( 
+@REM @REM if errorlevel > 0 (
 @REM @REM     echo Chromedriver path was already added
-@REM @REM     goto CleanUp 
+@REM @REM     goto CleanUp
 @REM @REM )
 
 @REM reg add "HKCU\Environment" /v Path /t REG_EXPAND_SZ /d "%path%" /f

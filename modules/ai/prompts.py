@@ -6,19 +6,18 @@ Copyright (C) 2024 Sai Vignesh Golla
 
 License:    GNU Affero General Public License
             https://www.gnu.org/licenses/agpl-3.0.en.html
-            
+
 GitHub:     https://github.com/GodsScion/Auto_job_applier_linkedIn
 
 version:    24.12.29.12.30
 """
-
 
 ##> Common Response Formats
 array_of_strings = {"type": "array", "items": {"type": "string"}}
 """
 Response schema to represent array of strings `["string1", "string2"]`
 """
-#<
+# <
 
 
 ##> Extract Skills
@@ -70,14 +69,14 @@ extract_skills_response_format = {
                 "required_skills",
                 "nice_to_have",
             ],
-            "additionalProperties": False
+            "additionalProperties": False,
         },
     },
 }
 """
 Response schema for `extract_skills` function
 """
-#<
+# <
 
 
 ##> Answer Questions
@@ -90,4 +89,4 @@ Question:
 User Info:
 {}
 """
-#<
+# <

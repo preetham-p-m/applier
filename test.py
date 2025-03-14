@@ -1,4 +1,4 @@
-'''
+"""
 Author:     Sai Vignesh Golla
 LinkedIn:   https://www.linkedin.com/in/saivigneshgolla/
 
@@ -6,11 +6,10 @@ Copyright (C) 2024 Sai Vignesh Golla
 
 License:    GNU Affero General Public License
             https://www.gnu.org/licenses/agpl-3.0.en.html
-            
+
 GitHub:     https://github.com/GodsScion/Auto_job_applier_linkedIn
 
-'''
-
+"""
 
 # REQUIRED IMPORTS
 from datetime import datetime
@@ -19,7 +18,7 @@ from datetime import datetime
 from modules.ai.openaiConnections import *
 from pprint import pprint
 
-#< Global Variables and logics
+# < Global Variables and logics
 
 job_description = """
 About the job
@@ -67,9 +66,10 @@ Exact compensation may vary based on several factors, including skills, experien
 
 """
 
+
 def main() -> None:
     client = ai_create_openai_client()
-    ai_extract_skills(client ,job_description)
+    ai_extract_skills(client, job_description)
     ai_close_openai_client(client)
 
 
@@ -80,7 +80,11 @@ if __name__ == "__main__":
     try:
         main()
     except Exception as e:
-        print_lg("_______________________________________________________________________")
+        print_lg(
+            "_______________________________________________________________________"
+        )
         print_lg(f"Exception occurred: {e}")
     finally:
-        print_lg("######################### TEST SCRIPT COMPLETED #########################")
+        print_lg(
+            "######################### TEST SCRIPT COMPLETED #########################"
+        )

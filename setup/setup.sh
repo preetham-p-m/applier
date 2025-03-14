@@ -6,7 +6,7 @@ Copyright (C) 2024 Sai Vignesh Golla
 
 License:    GNU Affero General Public License
             https://www.gnu.org/licenses/agpl-3.0.en.html
-            
+
 GitHub:     https://github.com/GodsScion/Auto_job_applier_linkedIn
 
 '''
@@ -61,9 +61,9 @@ latest_versions_info=$(curl -sS "https://googlechromelabs.github.io/chrome-for-t
 echo $latest_versions_info
 
 # Step 2: Get the download URL for win64 platform
-download_url=$(echo "$latest_versions_info" | 
-               grep -A 5 '"platform": "win64",' | 
-               grep 'url":' | 
+download_url=$(echo "$latest_versions_info" |
+               grep -A 5 '"platform": "win64",' |
+               grep 'url":' |
                awk -F'"' '{print $4}')
 
 echo "Download URL: '$download_url'"
